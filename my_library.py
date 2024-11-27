@@ -45,7 +45,6 @@ def naive_bayes(full_table, evidence_row, target_column):
   neg, pos = compute_probs(P0,P1)
   #return your 2 results in a list
   return[neg,pos]
- from os import fpathconf
 
 def metrics(zipped_list):
   assert isinstance(zipped_list, list)
