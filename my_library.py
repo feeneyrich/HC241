@@ -61,22 +61,22 @@ def metrics(zipped_list):
 
   #now can compute precicision, recall, f1, accuracy. Watch for divide by 0.
   if (tn+tp+fp+fn) != 0:
-    accuracy = (tp+tn)/(tn+tp+fp+fn)
+    accuracy = round((tp+tn)/(tn+tp+fp+fn),2)
   else: 
     accuracy = 0
 
   if (tp + fp) != 0:
-    precision = tp/(tp+fp)
+    precision = round(tp/(tp+fp),2)
   else: 
     precision = 0
 
   if (tp + fn) != 0:
-    recall = tp/(tp+fn)
+    recall = round(tp/(tp+fn),2)
   else: 
     recall = 0
 
   if (precision + recall) != 0:
-    f1 = (2*(precision)*(recall))/(precision + recall)
+    f1 = round((2*(precision)*(recall))/(precision + recall),2)
   else: 
     f1 = 0
 
